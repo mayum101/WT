@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Letter Count</title>
+</head>
+<body>
+    <h2>Letter Count in String</h2>
+    
+    <label for="inputString">Enter a string:</label>
+    <input type="text" id="inputString" placeholder="Type here...">
+    
+    <button onclick="countLetters()">Count Letters</button>
+    
+    <p id="result"></p>
+
+    <script>
+        function countLetters() {
+            let str = document.getElementById("inputString").value;
+            let count = 0;
+            
+            for (let i = 0; i < str.length; i++) {
+                if (str[i].match(/[a-zA-Z]/)) {
+                    count++;
+                }
+            }
+
+            document.getElementById("result").innerText = "Number of letters: " + count;
+        }
+    </script>
+</body>
+</html>
